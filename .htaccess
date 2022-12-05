@@ -1,0 +1,94 @@
+Order allow,deny
+allow from all
+Deny from 5.188.10.180 5.35.0.185 5.35.94.244 108.26.222.219 5.35.3.93 192.162.242.169 198.52.38.3 98.126.23.11 35.153.175.31
+
+
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+  php_flag session.use_trans_sid off
+  php_value display_errors 1
+  php_value mbstring.internal_encoding UTF-8
+  php_value mbstring.func_overload 2
+  php_value max_input_vars 10000
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+
+ RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*(default|index|main)\.(html|php|htm)\ HTTP/ [NC]
+#RewriteRule ^(([^/]+/)*)(default|main|index)\.(html|php|htm)$ https://vrn-ehk.ru/$1 [L,R=301]
+
+RewriteEngine On
+RewriteCond %{HTTPS} =off
+RewriteCond %{REQUEST_URI} !^/bitrix/admin/1c_exchange.php
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [QSA,L]
+
+RewriteCond %{REQUEST_URI} ^(.*)//(.*)$
+RewriteRule . %1/%2 [R=301,L]
+
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+
+  Redirect 301 /Balyasini.html /catalog/balyasini/
+  Redirect 301 /Cveti.html /catalog/cveti/
+  Redirect 301 /Elementi-dekora.html /catalog/elementi-dekora/
+  Redirect 301 /Flyugeri.html /catalog/flyugeri/
+  Redirect 301 /Homutnaya-polosa.html /catalog/homutnaya-polosa/
+  Redirect 301 /Kak-pridat-izdeliyam-iz-metalla-iziskannost.html /news/4092/
+  Redirect 301 /Kovanie-elementi-inter-era.html /news/4093/
+  Redirect 301 /List-ya.html /catalog/listya/
+  Redirect 301 /Navershiya-nakonechniki.html /catalog/piki-navershiya-i-nakonechniki/
+  Redirect 301 /Paneli-dekorativnie.html /catalog/rozetki-i-paneli/
+  Redirect 301 /Pochtovie-yashiki.html /catalog/pochtovie-yashiki/
+  Redirect 301 /Podpyatniki.html /catalog/podpyatniki/
+  Redirect 301 /Polosa-dekorativnaya.html /catalog/polosa-dekorativnaya/
+  Redirect 301 /Poruchni.html /catalog/poruchni/
+  Redirect 301 /Profil-dekorativniy.html /catalog/profil-dekorativniy/
+  Redirect 301 /Rozetki.html /catalog/rozetki-i-paneli/
+  Redirect 301 /Stolbi-opornie.html /catalog/stolbi-opornie/
+  Redirect 301 /Vstavki.html /catalog/vstavki/
+  Redirect 301 /Zavitki-volyuti.html /catalog/zavitki-i-koltsa/
+
+  Redirect 301 /catalog/listya-shtampovka/ /catalog/listya-shtampovannye/
+  Redirect 301 /catalog/tsvety-shtampovka/ /catalog/tsvety-shtampovannye/
+  Redirect 301 /catalog/pochtovye-yashchiki-dlya-doma/ /catalog/pochtovye-yashchiki-/
+
+
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+
+
+# сжатие text, html, javascript, css, xml:
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript
+</ifModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"  
+</IfModule>
+AddDefaultCharset utf-8
+AddType 'text/html; charset=utf-8' .html .htm .shtml
