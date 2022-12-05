@@ -1,0 +1,18 @@
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/ajax/feedback.php	[710] file from the Internet
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/ajax/reviews.php	[710] file from the Internet
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/ajax/fast_order.php	[710] file from the Internet
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/ajax/order_item.php	[710] file from the Internet
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/bitrix/modules/im/handlers/im.file.php	[630] long line
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/bitrix/modules/socialservices/lang/en/classes/general/google.php	[662] function return as a function
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/bitrix/modules/askaron.pro1c/admin/askaron_pro1c_log_view.php	[889] backticks with var
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/bitrix/php_interface/init.php	[400] bitrix auth
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/upload/ko.php	[110] php file in upload dir
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/upload/nagrad/2010/.section.php	[110] php file in upload dir
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/upload/nagrad/2011/.section.php	[110] php file in upload dir
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/upload/nagrad/2012/.section.php	[110] php file in upload dir
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/upload/nagrad/2015/.section.php	[110] php file in upload dir
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/upload/nagrad/2016/.section.php	[110] php file in upload dir
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/upload/nagrad/2014/.section.php	[110] php file in upload dir
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/upload/nagrad/2013/.section.php	[110] php file in upload dir
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/upload/tmp/BXTEMP-2022-11-07/20/bxu/main/.access.php	[110] php file in upload dir
+/var/www/vrn-ehk.ru/data/www/vrn-ehk.ru/user.php	[400] bitrix auth
