@@ -1,0 +1,1 @@
+<img alt="Цены снижены" src="/upload/medialibrary/6b7/tseny-snizheny-_240kh360_.jpg" title="Цены снижены" width="360" height="240"><br>

@@ -1,0 +1,1 @@
+<img alt="Огненный цветок" src="/upload/medialibrary/26a/01.1.jpg" title="Огненный цветок" width="300" height="200"><br>
